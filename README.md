@@ -14,7 +14,7 @@
 
 ## Diagram
 
-AWS-Infra.jpg
+![AWS-Infra](https://user-images.githubusercontent.com/41903634/234184744-9cbe0762-ae3a-400c-94b3-160379b19684.jpg)
 
 ## Prerequisites:
 
