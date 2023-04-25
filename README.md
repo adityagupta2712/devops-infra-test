@@ -1,5 +1,21 @@
 ## WEB application infrastructure in aws cloud using Terraform.
 
+
+## Explanation:
+
+- This Repository creates infrastructure in AWS cloud for web application deployment using Terraform.
+- Creates VPC with two private and two public subnets in different availability zones.
+- Creates Internet Gateway for communication with internet.
+- Creates NAT Gateway and Attach it to the private subnet for communication of private subnets to internet.
+- Creates an autoscaling group and launch configurations templates for EC2 Instances.
+- Creates security groups and route tables to enable traffic between subnets, NAT, and Internet Gateways.
+- Creates an Application Load Balancer for the EC2 auto scaling group.
+- Creates a Bastion Host EC2 instance to SSH into the EC2 instances running in private subnets.
+
+## Diagram
+
+AWS-Infra.jpg
+
 ## Prerequisites:
 
  - [AWS Account](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
@@ -16,7 +32,6 @@ Clone the Repository and perform key-pair step mentioned above in Prerequisites.
 
 Run below commands
 
-
 ```
 terraform init
 ```
@@ -32,7 +47,7 @@ Now you Navigate to the AWS console and verify all the resources are created.
 ## Test the deployment
 
 Open a new window in the browser and copy and paste the output generated in after running terraform apply. Copy the Application Load Balancer URL and paste it into the browser.
-If you see 502 Bad Gateway in browser then please wait for 5 min or else check if EC2 instances are healthy or still initializing.
+
 
 ## Teardown the Infrastructure:
 Always teardown the infrastructure if not needed to avoid bills for unnecessary workloads.
