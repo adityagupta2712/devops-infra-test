@@ -91,7 +91,4 @@ resource "aws_launch_configuration" "ec2" {
   associate_public_ip_address = false
   user_data                   = file("./script.sh")
   depends_on                  = [aws_nat_gateway.terraform-test-ngw]
-  tags = {
-    Name = "Web-app"
-  }
 }

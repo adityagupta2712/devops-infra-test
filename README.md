@@ -32,7 +32,7 @@ Now you Navigate to the AWS console and verify all the resources are created.
 ## Test the deployment
 
 Open a new window in the browser and copy and paste the output generated in after running terraform apply. Copy the Application Load Balancer URL and paste it into the browser.
-
+If you see 502 Bad Gateway in browser then please wait for 5 min or else check if EC2 instances are healthy or still initializing.
 
 ## Teardown the Infrastructure:
 Always teardown the infrastructure if not needed to avoid bills for unnecessary workloads.
